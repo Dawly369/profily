@@ -19,6 +19,14 @@
     var MODES = ['light', 'dark', 'auto'];
     var ACCENTS = ['violet', 'coral', 'teal', 'amber'];
     var root = document.documentElement;
+
+    // Marks that scripts are running, so scroll-reveal may hide content until
+    // it scrolls into view. If the main script has not started after a few
+    // seconds, everything is shown again so nothing stays hidden.
+    root.classList.add('js');
+    window.setTimeout(function () {
+        if (!root.classList.contains('ready')) { root.classList.remove('js'); }
+    }, 4000);
     var query = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
 
     function read(key) {

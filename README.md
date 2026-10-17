@@ -5,10 +5,18 @@ A fast, responsive personal website built with plain HTML, CSS and JavaScript. N
 ## Files
 
 - `index.html` page content, SEO tags and the Content Security Policy
-- `style.css` design tokens, light and dark modes, accent colors and layout
+- `style.css` design tokens, light and dark modes, accent gradients, 3D effects, animation and layout
 - `theme.js` applies the saved theme before the page paints
-- `script.js` theme menu, active nav link and footer year
+- `script.js` theme menu, scroll progress, reveal on scroll, and 3D tilt
 - `abdo.jpg` profile photo (keep it in the same folder as `index.html`)
+
+## Motion and 3D
+
+- Animated gradient background, headline and contact panel, with colors that follow the chosen accent.
+- Portrait and cards tilt toward the mouse. On touch screens the portrait sways gently instead.
+- Rotating 3D skills cube, floating skill chips, a word-by-word headline entrance and a scroll progress bar.
+- Visitors who set "reduce motion" in their system get a still page with all content visible.
+- Layout adapts from small phones to large desktop screens.
 
 ## Themes
 

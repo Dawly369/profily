@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Abdo Maghawry | AI Automation and Front-End Developer</title>
     <meta name="description" content="Abdo Maghawry is a Computer Science student at Delta University for Science and Technology. He focuses on AI automation and builds responsive websites with HTML, CSS and JavaScript.">
     <meta name="author" content="Abdelrahman Maghawry Basha">
@@ -25,6 +25,7 @@
     <script src="theme.js"></script>
 </head>
 <body>
+    <div class="progress" aria-hidden="true"></div>
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
@@ -67,20 +68,42 @@
 
     <main id="main">
         <section class="hero" id="top">
+            <div class="hero-bg" aria-hidden="true">
+                <span class="blob blob-1"></span>
+                <span class="blob blob-2"></span>
+                <span class="blob blob-3"></span>
+            </div>
+
             <div class="container hero-grid">
                 <div class="hero-copy">
-                    <h1>Abdo Maghawry</h1>
-                    <p class="tagline">AI automation and front-end development</p>
-                    <p class="lead">I'm a Computer Science student at Delta University for Science and Technology. My main focus is AI automation: workflows and prompts that take repetitive tasks off your plate. I also build responsive websites with HTML, CSS and JavaScript.</p>
-                    <div class="actions">
+                    <h1 aria-label="Abdo Maghawry">
+                        <span class="word w1 grad-text" aria-hidden="true">Abdo</span>
+                        <span class="word w2 grad-text" aria-hidden="true">Maghawry</span>
+                    </h1>
+                    <p class="tagline rise rise-1">
+                        <span class="static">AI automation and front-end development</span>
+                        <span class="ticker" aria-hidden="true">
+                            <span>AI automation</span>
+                            <span>Prompt engineering</span>
+                            <span>Front-end development</span>
+                            <span>Responsive websites</span>
+                        </span>
+                    </p>
+                    <p class="lead rise rise-2">I'm a Computer Science student at Delta University for Science and Technology. My main focus is AI automation: workflows and prompts that take repetitive tasks off your plate. I also build responsive websites with HTML, CSS and JavaScript.</p>
+                    <div class="actions rise rise-3">
                         <a class="btn btn-primary" href="#projects">See my projects</a>
                         <a class="btn btn-secondary" href="#contact">Contact me</a>
                     </div>
                 </div>
 
-                <figure class="portrait">
-                    <div class="frame">
-                        <img src="abdo.jpg" width="896" height="1195" alt="Portrait of Abdo Maghawry in a navy suit and tie" fetchpriority="high">
+                <figure class="portrait rise rise-2">
+                    <div class="tilt-stage">
+                        <div class="frame">
+                            <img src="abdo.jpg" width="896" height="1195" alt="Portrait of Abdo Maghawry in a navy suit and tie" fetchpriority="high">
+                        </div>
+                        <span class="chip chip-a" aria-hidden="true">AI automation</span>
+                        <span class="chip chip-b" aria-hidden="true">HTML, CSS, JavaScript</span>
+                        <span class="chip chip-c" aria-hidden="true">Prompt engineering</span>
                     </div>
                 </figure>
             </div>
@@ -88,8 +111,20 @@
 
         <section class="section" id="about" aria-labelledby="about-title">
             <div class="container split">
-                <h2 id="about-title">About</h2>
-                <div class="stack">
+                <div class="side reveal">
+                    <h2 id="about-title">About</h2>
+                    <div class="cube-wrap" aria-hidden="true">
+                        <div class="cube">
+                            <span class="face f-front">AI</span>
+                            <span class="face f-back">Prompts</span>
+                            <span class="face f-right">HTML</span>
+                            <span class="face f-left">CSS</span>
+                            <span class="face f-top">JS</span>
+                            <span class="face f-bottom">Git</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="stack reveal">
                     <p>I study Computer Science and take on freelance projects. AI automation is where I'm putting most of my learning time, and I work at an intermediate level. I also write plain HTML, CSS and JavaScript, so I know what every line of a page does and keep the result light and quick to load.</p>
                     <dl class="facts">
                         <div>
@@ -115,22 +150,31 @@
 
         <section class="section" id="services" aria-labelledby="services-title">
             <div class="container split">
-                <h2 id="services-title">Services</h2>
-                <ul class="rows">
-                    <li class="row">
-                        <h3>AI automation</h3>
-                        <p>My main focus. I build AI-assisted workflows and write prompts that handle repetitive tasks, and I tell you up front what is realistic for your budget and timeline.</p>
-                        <p class="tags">Intermediate level. Prompt engineering, LLMs and AI agents, REST API basics.</p>
+                <div class="side reveal">
+                    <h2 id="services-title">Services</h2>
+                </div>
+                <ul class="card-grid">
+                    <li class="reveal featured">
+                        <article class="card" data-tilt>
+                            <p class="badge">Main focus, intermediate level</p>
+                            <h3>AI automation</h3>
+                            <p>I build AI-assisted workflows and write prompts that handle repetitive tasks, and I tell you up front what is realistic for your budget and timeline.</p>
+                            <p class="tags">Prompt engineering, LLMs and AI agents, REST API basics.</p>
+                        </article>
                     </li>
-                    <li class="row">
-                        <h3>Front-end websites</h3>
-                        <p>Responsive, accessible pages such as portfolios, landing pages and small web apps.</p>
-                        <p class="tags">HTML, CSS, JavaScript, Git and GitHub.</p>
+                    <li class="reveal">
+                        <article class="card" data-tilt>
+                            <h3>Front-end websites</h3>
+                            <p>Responsive, accessible pages such as portfolios, landing pages and small web apps.</p>
+                            <p class="tags">HTML, CSS, JavaScript, Git and GitHub.</p>
+                        </article>
                     </li>
-                    <li class="row">
-                        <h3>Social media and content</h3>
-                        <p>Scripts, short videos and posting plans for small brands and creators.</p>
-                        <p class="tags">Content planning, scripting, social media management.</p>
+                    <li class="reveal">
+                        <article class="card" data-tilt>
+                            <h3>Social media and content</h3>
+                            <p>Scripts, short videos and posting plans for small brands and creators.</p>
+                            <p class="tags">Content planning, scripting, social media management.</p>
+                        </article>
                     </li>
                 </ul>
             </div>
@@ -138,52 +182,66 @@
 
         <section class="section" id="projects" aria-labelledby="projects-title">
             <div class="container split">
-                <h2 id="projects-title">Projects</h2>
-                <ul class="project-grid">
-                    <li class="row">
-                        <h3>Flip Clock</h3>
-                        <p>An animated flip clock with moving RGB gradient backgrounds and floating Arabic calligraphy.</p>
-                        <p class="tags">HTML, CSS, JavaScript</p>
-                        <a class="text-link" href="https://github.com/Dawly369/abduo-clock" target="_blank" rel="noopener noreferrer">View the code on GitHub</a>
+                <div class="side reveal">
+                    <h2 id="projects-title">Projects</h2>
+                </div>
+                <ul class="card-grid">
+                    <li class="reveal">
+                        <article class="card" data-tilt>
+                            <h3>Flip Clock</h3>
+                            <p>An animated flip clock with moving RGB gradient backgrounds and floating Arabic calligraphy.</p>
+                            <p class="tags">HTML, CSS, JavaScript</p>
+                            <a class="text-link" href="https://github.com/Dawly369/abduo-clock" target="_blank" rel="noopener noreferrer">View the code on GitHub</a>
+                        </article>
                     </li>
-                    <li class="row">
-                        <h3>TaskFlow</h3>
-                        <p>A Kanban-style task manager that keeps your boards saved in the browser.</p>
-                        <p class="tags">HTML, CSS, JavaScript, localStorage</p>
+                    <li class="reveal">
+                        <article class="card" data-tilt>
+                            <h3>TaskFlow</h3>
+                            <p>A Kanban-style task manager that keeps your boards saved in the browser.</p>
+                            <p class="tags">HTML, CSS, JavaScript, localStorage</p>
+                        </article>
                     </li>
-                    <li class="row">
-                        <h3>Daily Discipline Toolkit</h3>
-                        <p>Three HTML tools: a daily discipline checklist, a four-month trader roadmap and a daily routine planner.</p>
-                        <p class="tags">HTML, CSS, JavaScript</p>
+                    <li class="reveal">
+                        <article class="card" data-tilt>
+                            <h3>Daily Discipline Toolkit</h3>
+                            <p>Three HTML tools: a daily discipline checklist, a four-month trader roadmap and a daily routine planner.</p>
+                            <p class="tags">HTML, CSS, JavaScript</p>
+                        </article>
                     </li>
-                    <li class="row">
-                        <h3>Interactive study tools</h3>
-                        <p>Exam practice and revision tools for university courses, covering operating system scheduling, digital logic and databases.</p>
-                        <p class="tags">HTML, CSS, JavaScript</p>
+                    <li class="reveal">
+                        <article class="card" data-tilt>
+                            <h3>Interactive study tools</h3>
+                            <p>Exam practice and revision tools for university courses, covering operating system scheduling, digital logic and databases.</p>
+                            <p class="tags">HTML, CSS, JavaScript</p>
+                        </article>
                     </li>
-                    <li class="row">
-                        <h3>Library Management System</h3>
-                        <p>A Java course project built around a library management system.</p>
-                        <p class="tags">Java</p>
+                    <li class="reveal">
+                        <article class="card" data-tilt>
+                            <h3>Library Management System</h3>
+                            <p>A Java course project built around a library management system.</p>
+                            <p class="tags">Java</p>
+                        </article>
                     </li>
-                    <li class="row">
-                        <h3>IoT project</h3>
-                        <p>A live demo hosted on GitHub Pages.</p>
-                        <a class="text-link" href="https://dawly369.github.io/IOT/" target="_blank" rel="noopener noreferrer">Open the live demo</a>
+                    <li class="reveal">
+                        <article class="card" data-tilt>
+                            <h3>IoT project</h3>
+                            <p>A live demo hosted on GitHub Pages.</p>
+                            <a class="text-link" href="https://dawly369.github.io/IOT/" target="_blank" rel="noopener noreferrer">Open the live demo</a>
+                        </article>
                     </li>
                 </ul>
             </div>
         </section>
 
         <section class="section contact" id="contact" aria-labelledby="contact-title">
-            <div class="container split">
-                <h2 id="contact-title">Contact</h2>
-                <div class="stack">
+            <div class="container">
+                <div class="contact-panel reveal">
+                    <h2 id="contact-title">Contact</h2>
                     <p class="contact-lead">Have a task you want automated or a website you need built? Send me a short message about it.</p>
                     <a class="email-link" href="mailto:maghawryabdo@gmail.com">maghawryabdo@gmail.com</a>
                     <div class="actions">
-                        <a class="btn btn-primary" href="https://wa.me/201202938051" target="_blank" rel="noopener noreferrer">Message on WhatsApp</a>
-                        <a class="btn btn-secondary" href="tel:+201202938051">Call +20 120 293 8051</a>
+                        <a class="btn btn-invert" href="https://wa.me/201202938051" target="_blank" rel="noopener noreferrer">Message on WhatsApp</a>
+                        <a class="btn btn-outline-invert" href="tel:+201202938051">Call +20 120 293 8051</a>
                     </div>
                 </div>
             </div>
